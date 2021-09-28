@@ -1,5 +1,5 @@
 header{
-    background-color: rgb(89, 3, 146);
+    background-color: rgb(0, 88, 110);
     color:#fff;
 }
 
@@ -10,7 +10,7 @@ header{
 .login {
     max-width: 40%;
     height: auto;
-    background-color: rgb(89, 3, 146);
+    background-color: rgb(0, 88, 110);
   }
 
   .login #login-box #login-form {
@@ -24,7 +24,7 @@ header{
   }
 
   .btn:hover{
-      background-color: rgb(21, 142, 255);
+      background-color: rgb(35, 129, 218);
       color: #fff;
   }
 
