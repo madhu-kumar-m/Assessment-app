@@ -27,9 +27,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "../Assessment-app/node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "../Assessment-app/node_modules/font-awesome/css/font-awesome.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "../Assessment-app/node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "../Assessment-app/node_modules/jquery/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {

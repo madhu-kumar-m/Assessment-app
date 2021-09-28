@@ -1,0 +1,54 @@
+header{
+    background-color: rgb(89, 3, 146);
+    color:#fff;
+}
+
+#email, #password{
+    font-size: 20px;
+}
+
+.login {
+    max-width: 40%;
+    height: auto;
+    background-color: rgb(89, 3, 146);
+  }
+
+  .login #login-box #login-form {
+    padding: 30px;
+  }
+
+.btn{
+      font-weight: 700;
+      font-size: 20px;
+      border: none;
+  }
+
+  .btn:hover{
+      background-color: rgb(21, 142, 255);
+      color: #fff;
+  }
+
+  .password-field{
+      border: #fff;
+      background-color: #fff;
+      border-radius: 5px;
+  }
+
+  .password, .email{
+      font-size: 20px;
+  }
+
+  .toggle-btn{
+      background-color: none;
+  }
+
+
+
+  @media(max-width: 780px) {
+
+    .login {
+        max-width: 80%;
+      }
+    
+  }
+  
