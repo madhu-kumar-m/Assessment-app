@@ -12,4 +12,6 @@ export class AdminNavpageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+ 
+
 }

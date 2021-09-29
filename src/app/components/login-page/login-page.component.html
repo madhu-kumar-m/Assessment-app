@@ -9,7 +9,9 @@
     <div class="login m-auto mt-5">
                 <div id="login-box" class="col-md-12">
                     <form id="login-form" class="form" [formGroup]="formGroup"  (ngSubmit)="loginProcess()">
-                        <h2 class="text-center text-light"><small>Welcome!&nbsp;</small>&nbsp;Login</h2>
+                        <div class="heading border-bottom border-3 py-1">
+                            <h2 class="text-center text-light"><small>Welcome!&nbsp;</small>&nbsp;Login</h2>
+                        </div>
                         <div class="form-group py-3">
                             <label for="email" class="text-light email"><i class="fa fa-envelope pe-3"></i>Email address</label><br>
                             <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email address" formControlName="email">
@@ -21,12 +23,16 @@
                                 <i id="pass-word" class="fa fa-eye-slash my-auto mx-3"  (click)= "showHidePassword()"></i>
                             </div>
                         </div>
-                        <div class="form-group py-3 d-flex justify-content-between">
+                        <div class="form-group py-2 d-flex justify-content-between">
                             <label for="remember-me" class="text-light"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label>
                             <a href="#" class="text-light text-end">forgot password</a>
                         </div>
                         <div class="form-group text-center py-1">
                             <input type="submit" name="submit" class="btn btn-light" value="Login >">
+                        </div>
+                        <div *ngIf="showAlert" class="alert alert-danger alert-dismissible fade show my-1 p-0" role="alert">
+                            <strong>Invalid Credentials!</strong>
+                            <button type="button" class="btn-close  p-1" data-bs-dismiss="alert" (click)= "showAlert=false"></button>
                         </div>
                         <div id="register-link" class="text-left pt-3">
                             <a href="#" class="text-light">Register here</a>
@@ -34,4 +40,6 @@
                     </form>
               </div>
     </div>
+
+    
 </main>

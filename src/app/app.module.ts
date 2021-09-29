@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminNavpageComponent } from './components/admin-navpage/admin-navpage.component';
 import { AdminDashboardComponent } from './components/admin-navpage/admin-dashboard/admin-dashboard.component';
 import { NgxWebstorageModule } from 'ngx-webstorage';
+import { StudentNavpageComponent } from './components/student-navpage/student-navpage.component'; 
+import { StudentDashboardComponent } from './components/student-navpage/student-dashboard/student-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
     LoginPageComponent,
     AdminNavpageComponent,
     AdminDashboardComponent,
+    StudentNavpageComponent,
+    StudentDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,7 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
     ReactiveFormsModule,
     NgxWebstorageModule.forRoot()
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
