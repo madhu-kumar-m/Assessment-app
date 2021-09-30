@@ -1,0 +1,64 @@
+<!-- navbar -->
+
+<nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+        <div class="sidebar-toggler">
+          <a class="btn text-decoration-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+            <i class="fa fa-bars text-light fa-2x"></i>
+          </a>
+        </div>
+        <div class="logo ms-3">
+            <a class="navbar-brand d-flex text-light" href="#">
+                <i class="fa fa-pencil-square-o fa-2x pe-sm-2"></i>
+                <h5>Assessment app</h5>
+            </a>
+        </div>
+  
+        <div class=" user navbar-nav ms-auto mb-2 mb-lg-0">
+          <div class="nav-item dropdown d-flex ms-auto user-avatar">
+              <i class="fa fa-user-circle-o m-auto fa-2x pe-2" ></i>
+              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#" (click)="onLogout()"><i class="fa fa-sign-out pe-3 my-auto" aria-hidden="true"></i>Logout</a></li>
+              </ul>
+          </div>
+        </div>
+    
+    </div>
+  </nav>
+  <!--navbar-->
+
+  <!--Offcanvas-->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+    <div class="offcanvas-header">
+      <div class="offcanvas-title d-flex" id="offcanvasWithBackdropLabel">
+          <i class="fa fa-user-circle-o m-auto fa-2x text-light" ></i>
+          <h6 class="text-light m-auto ps-2">UserName</h6>
+      </div>
+      <button type="button" class="btn btn-close text-reset bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+   </div>
+    <div class="offcanvas-body d-flex flex-column">
+        <div class="menu-list">
+          <div class="menu text-light pt-2 ps-3">
+            <i class="fa fa-tachometer pe-3 pe-sm-2 pt-1"></i>
+            <a>Dashboard</a>
+          </div>
+          <div class="menu text-light pt-2 ps-3">
+            <i class="fa fa-columns pe-3 pe-sm-2 pt-1"></i>
+            <a>Exams</a>
+          </div>
+          <div class="menu text-light pt-2 ps-3">
+            <i class="fa fa-file-text-o pe-3 pe-sm-2 pt-1"></i>
+            <a>Questions</a>
+          </div>
+        </div>
+        <div class="logout menu pt-2 text-light mb-5 ps-3 text-bottom mt-auto border-top">
+          <a (click)="onLogout()"><i class="fa fa-sign-out my-auto pe-3 pe-sm-2" aria-hidden="true"></i>Logout</a>
+        </div>
+      </div>
+  </div>
+  <!--Offcanvas-->
+
+<router-outlet></router-outlet>

@@ -44,11 +44,11 @@ export class LoginPageComponent implements OnInit {
         const decodedToken = this.helper.decodeToken(res.token);
         if(decodedToken.user.userId == 2) 
         {
-          this.route.navigate(['/admin']);
+          this.route.navigate(['/nav/admin-dashboard']);
           localStorage.setItem("token", res.token);
         } 
         else if(decodedToken.user.userId == 1) {
-          this.route.navigate(['/student']);
+          this.route.navigate(['/nav/student-dashboard']);
           localStorage.setItem("token", res.token);
         }
         else {
@@ -60,6 +60,8 @@ export class LoginPageComponent implements OnInit {
         }
         )}
   }
+
+
  
 
 

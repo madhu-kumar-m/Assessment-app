@@ -1,0 +1,91 @@
+.navbar{
+    background: rgb(0, 88, 110);
+    color: #fff;
+    height: 70px;
+}
+
+.sidebar-toggler, .text-reset, .offcanvas-header, .logout{
+    display: none;
+}
+
+.offcanvas{
+    width: 270px;
+    height: 100vh;
+    top: 70px;
+    background: rgb(0, 88, 110);
+    border-top: 2px solid #fff;
+}
+
+.offcanvas-header{
+    border-bottom: 2px solid #fff;
+}
+
+.menu{
+    font-size: 20px;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.menu:hover{
+    background: rgb(13, 52, 61);
+    border-left: 3px solid #fff;
+    transition: ease;
+    transition: step-start;
+}
+
+.dropdown-item:hover{
+    background: rgb(9, 63, 75);
+    color: white
+}
+
+
+@media(min-width: 767px) {
+    .offcanvas{
+        transform: none;
+        visibility: visible !important;
+    }
+
+}
+
+
+
+@media(max-width: 767px) {
+
+
+      .logo h5{
+          font-size: 20px;
+      }
+
+      .fa-pencil-square-o{
+          font-size: 24px;
+          margin-top: 05px;
+      }
+
+     .user{
+          display: none;
+      }
+
+      .sidebar-toggler, .text-reset, .logout{
+          display: block;
+      }
+
+      .offcanvas-header{
+          display: flex;
+          height: 80px;
+      }
+
+      .navbar{
+        height: auto;
+    }
+
+      .offcanvas{
+        width: 240px;
+        height: 100vh;
+        top: 0;
+    }
+
+    .btn-close:hover{
+        color: white;
+    }
+
+}
