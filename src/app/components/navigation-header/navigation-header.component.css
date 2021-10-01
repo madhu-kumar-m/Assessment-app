@@ -33,6 +33,11 @@
     transition: step-start;
 }
 
+.menu:focus{
+    background: rgb(13, 52, 61);
+    border-left: 3px solid #fff;
+}
+
 .dropdown-item:hover{
     background: rgb(9, 63, 75);
     color: white

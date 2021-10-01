@@ -18,7 +18,7 @@
           <div class="nav-item dropdown d-flex ms-auto user-avatar">
               <i class="fa fa-user-circle-o m-auto fa-2x pe-2" ></i>
               <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                {{this.userName}}
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#" (click)="onLogout()"><i class="fa fa-sign-out pe-3 my-auto" aria-hidden="true"></i>Logout</a></li>
@@ -35,23 +35,31 @@
     <div class="offcanvas-header">
       <div class="offcanvas-title d-flex" id="offcanvasWithBackdropLabel">
           <i class="fa fa-user-circle-o m-auto fa-2x text-light" ></i>
-          <h6 class="text-light m-auto ps-2">UserName</h6>
+          <h6 class="text-light m-auto ps-2">{{this.userName}}</h6>
       </div>
       <button type="button" class="btn btn-close text-reset bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
    </div>
     <div class="offcanvas-body d-flex flex-column">
         <div class="menu-list">
-          <div class="menu text-light pt-2 ps-3">
+          <div *ngIf="this.admin" class="menu text-light pt-2 ps-3" [routerLink]="['admin-dashboard']" tabindex="0">
             <i class="fa fa-tachometer pe-3 pe-sm-2 pt-1"></i>
-            <a>Dashboard</a>
+            <a class="text-decoration-none text-light" >Dashboard</a>
           </div>
-          <div class="menu text-light pt-2 ps-3">
+          <div  *ngIf="this.admin"  class="menu text-light pt-2 ps-3" [routerLink]="['exams']" tabindex="0">
             <i class="fa fa-columns pe-3 pe-sm-2 pt-1"></i>
-            <a>Exams</a>
+            <a class="text-decoration-none text-light" (click)="examLists()" >Exams</a>
           </div>
-          <div class="menu text-light pt-2 ps-3">
+          <div *ngIf="this.admin"  class="menu text-light pt-2 ps-3" [routerLink]="['questions']" tabindex="0">
             <i class="fa fa-file-text-o pe-3 pe-sm-2 pt-1"></i>
-            <a>Questions</a>
+            <a class="text-decoration-none text-light" >Questions</a>
+          </div>
+          <div *ngIf="this.student" class="menu text-light pt-2 ps-3" [routerLink]="['student-dashboard']" tabindex="0">
+            <i class="fa fa-tachometer pe-3 pe-sm-2 pt-1"></i>
+            <a class="text-decoration-none text-light" >Dashboard</a>
+          </div>
+          <div *ngIf="this.student" class="menu text-light pt-2 ps-3" [routerLink]="['branch']" tabindex="0">
+            <i class="fa fa-object-group pe-3 pe-sm-2 pt-1"></i>
+            <a class="text-decoration-none text-light" >Branch</a>
           </div>
         </div>
         <div class="logout menu pt-2 text-light mb-5 ps-3 text-bottom mt-auto border-top">

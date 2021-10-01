@@ -1,0 +1,38 @@
+<main class="main fluid-container">
+    <div class="heading border-bottom pt-2 ps-3">
+        <h2>Exams</h2>
+    </div>
+    <div class="scroll">
+    <div *ngFor="let i of this.examsList" class="list my-4">
+        <table class="table mt-3 table-font">
+        <tbody>
+             <tr>
+                <th scope="col">Sl.no</th>
+                <th scope="col">{{i.examId}}</th>
+              </tr>
+              <tr>
+                <th scope="col">Exam Name</th>
+                <th scope="col">{{i.name}}</th>
+              </tr>
+              <tr>
+                <th scope="col">Exam Date</th>
+                <th scope="col">{{i.date}}</th>
+              </tr>
+              <tr>
+                <th scope="col">Time Duration</th>
+                <th scope="col">{{i.duration}}</th>
+              </tr>
+              <tr>
+                <th scope="col">No. of Questions</th>
+                <th scope="col">{{i.questionCount}}</th>
+              </tr>
+        </tbody>
+        </table>
+        <div class="buttons text-center d-flex justify-content-around pt-1">
+            <button class="btn btn-sm btn-primary">Take Exam</button>
+            <button class="btn btn-sm btn-secondary">Edit Exam</button>
+            <button class="btn btn-sm btn-danger">Delete Exam</button>
+        </div>
+    </div>
+  </div>
+</main>
