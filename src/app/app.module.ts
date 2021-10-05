@@ -12,6 +12,7 @@ import { ExamsComponent } from './components/admin/exams/exams.component';
 import { QuestionsComponent } from './components/admin/questions/questions.component';
 import { BranchComponent } from './components/student/branch/branch.component';
 import { AuthGuardService } from './components/auth-guard.service';
+import * as bootstrap from "bootstrap";
 
 
 

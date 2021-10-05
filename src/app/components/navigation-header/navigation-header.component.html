@@ -51,7 +51,7 @@
           </div>
           <div *ngIf="this.admin"  class="menu text-light pt-2 ps-3" [routerLink]="['questions']" tabindex="0">
             <i class="fa fa-file-text-o pe-3 pe-sm-2 pt-1"></i>
-            <a class="text-decoration-none text-light" >Questions</a>
+            <a class="text-decoration-none text-light" (click)="questionLists()" >Questions</a>
           </div>
           <div *ngIf="this.student" class="menu text-light pt-2 ps-3" [routerLink]="['student-dashboard']" tabindex="0">
             <i class="fa fa-tachometer pe-3 pe-sm-2 pt-1"></i>

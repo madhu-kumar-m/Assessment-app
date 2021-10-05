@@ -1,6 +1,71 @@
-<main class="main">
-    <div class="text-center mt-5">
-        <h3>Question works!</h3>
+<main class="main fluid-container">
+    <div class="heading border-bottom pt-2 ps-3 d-flex justify-content-between">
+        <h2>Questions</h2>
+        <button type="button" class="btn btn-primary m-3" (click)="displayQuestionRow()" >Add Question</button>
     </div>
+
+    <div class="scroll">
+    <div class="list my-4">
+        <table class="table mt-3 table-font">
+        <tbody>
+             <tr class="table-heading">
+                <th scope="col">Q.no</th>
+                <th scope="col">Question Description</th>
+                <th scope="col">Type</th>
+                <th scope="col">Marks</th>
+                <th scope="col">Actions</th>
+              </tr>
+              <tr *ngIf="inputQuestionRow">
+                  <td scope="col">
+                    <form [formGroup]="formGroup">
+                      <button class="form-control btn btn-danger p-1" (click)="closeQuestionRow()"><i class="fa fa-times"></i></button>
+                    </form>
+                  </td>
+                  <td scope="col">
+                    <form [formGroup]="formGroup">
+                      <textarea type="text-area" class="form-control" id="questiondescription" placeholder="Question goes here..." formControlName="title"></textarea>
+                    </form>
+                  </td>
+                  <td scope="col">
+                    <form [formGroup]="formGroup"> 
+                      <input type="text" class="form-control" id="questiontype" placeholder="MCQ/Descriptive" formControlName="type">
+                    </form>
+                    <div *ngIf="alertField"><p class="text-danger"><b>Select either DESCRIPTIVE or MCQ</b></p></div>
+                  </td>
+                  <td scope="col">
+                    <form [formGroup]="formGroup">
+                      <input type="number" class="form-control" id="questionmarks" placeholder="Marks" formControlName="marks">
+                    </form>
+                    <div *ngIf="alertField"><p class="text-danger"><b>Provide positive number</b></p></div>
+                  </td>
+                  <td scope="col">
+                    <form [formGroup]="formGroup" (ngSubmit)="addQuestion()">
+                      <!-- <button type="button" class="btn btn-primary m-2">Add</button> -->
+                      <input type="submit" name="submit" class="btn btn-primary m-2" value="Add">
+                    </form>
+                  </td>
+              </tr>
+              <tr *ngFor="let i of this.questionsList">
+                <td scope="col">{{i.questionId}}</td>
+                <td scope="col">{{i.title}}</td>
+                <td scope="col">{{i.type}}</td>
+                <td scope="col">{{i.marks}}</td>
+                <td class="d-flex justify-content-around" scope="col">
+                    <button  type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Edit"><i class="fa fa-pencil-square-o"></i></button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="right" title="Delete"><i class="fa fa-trash"></i></button>
+                </td>
+              </tr>      
+        </tbody>
+        </table>
+    </div>
+    <div *ngIf="showQuestionSuccess" class="alert alert-success alert-dismissible fade show text-light" role="alert">
+      Question has been added <strong>successfully!</strong>
+      <button type="button" class="btn-close  p-2 bg-light" data-bs-dismiss="alert" aria-label="Close" (click)="closeAlert()"></button>
+    </div>
+    <div *ngIf="showQuestionFailed" class="alert alert-danger alert-dismissible fade show text-light" role="alert">
+      Question has <strong>NOT</strong> been added!
+      <button type="button" class="btn-close p-2 bg-light" data-bs-dismiss="alert" aria-label="Close" (click)="closeAlert()"></button>
+    </div>
+  </div>
 </main>
 

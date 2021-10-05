@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { ExamServiceService } from '../admin/exams/exam-service.service';
+import { QuestionServicesService } from '../admin/questions/question-services.service';
 
 @Component({
   selector: 'app-navigation-header',
@@ -19,7 +20,8 @@ export class NavigationHeaderComponent implements OnInit {
 
 
   constructor(private route:Router,
-                private examService:ExamServiceService) { }
+                private examService:ExamServiceService,
+                private questionService: QuestionServicesService) { }
 
   ngOnInit(): void {
     const localToken:any = localStorage.getItem("token");
@@ -50,15 +52,18 @@ export class NavigationHeaderComponent implements OnInit {
 
   //Call Exam Get request
   examLists() {
-    this.examService.getExams().subscribe( data => console.log(data));
-    // console.log(this.examService.getExams());
+    this.examService.getExams().subscribe();
+  }
+
+  //Call Question Get request
+  questionLists() {
+    this.questionService.getQuestions().subscribe();
   }
 
 
   //Logout Function
-
   onLogout() {
-    localStorage.removeItem('eq_user');
+    localStorage.removeItem('token');
     localStorage.clear();
     this.route.navigate(['login']);
   }
