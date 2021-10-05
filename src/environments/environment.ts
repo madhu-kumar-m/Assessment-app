@@ -6,7 +6,6 @@ export const environment = {
   production: false
 };
 
-export const baseUrl = 'http://testing-intern-api.herokuapp.com/api';
 
 /*
  * For easier debugging in development mode, you can import the following file
