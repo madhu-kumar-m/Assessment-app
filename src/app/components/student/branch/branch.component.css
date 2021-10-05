@@ -5,7 +5,38 @@
     min-width: calc(100vw - 270px);
     border-radius: 15px;
     min-height: calc(100vh - 70px);
+    background: rgb(243, 243, 243);
 }
+
+.table{
+    width: 85%;
+    margin: auto;
+    background: rgb(3, 181, 212);
+    border-radius: 10px;
+}
+
+.table-font{
+    font-size: 14px;
+}
+
+.list .buttons{
+    border-bottom: 1px solid rgb(92, 88, 88);
+    margin-bottom: 10px;
+    padding-bottom: 05px;
+}
+
+.scroll{
+    overflow-y: scroll;
+    max-height: 80vh;
+}
+
+.scroll::-webkit-scrollbar {
+    overflow-y: scroll;
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+
 
 
 @media(max-width: 767px) {

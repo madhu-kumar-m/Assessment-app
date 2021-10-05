@@ -1,5 +1,30 @@
-<main class="main">
-    <div class="text-center mt-5">
-        <h3>branch works!</h3>
+<main class="main fluid-container">
+    <div class="heading border-bottom pt-2 ps-3">
+        <h2>Branches</h2>
     </div>
+    <div class="scroll">
+    <div *ngFor="let i of this.branchList" class="list my-4">
+        <table class="table mt-3 table-font">
+        <tbody>
+             <tr>
+                <th scope="col">Sl.no</th>
+                <th scope="col">{{i.branchId}}</th>
+              </tr>
+              <tr>
+                <th scope="col">Branch Name</th>
+                <th scope="col">{{i.name}}</th>
+              </tr>
+              <tr>
+                <th scope="col">Capacity</th>
+                <th scope="col">{{i.capacity}}</th>
+              </tr>
+        </tbody>
+        </table>
+        <div class="buttons text-center d-flex justify-content-around pt-1">
+            <button class="btn btn-sm btn-secondary m-3">Edit Branch</button>
+            <button class="btn btn-sm btn-danger m-3">Delete Branch</button>
+        </div>
+    </div>
+  </div>
 </main>
+
