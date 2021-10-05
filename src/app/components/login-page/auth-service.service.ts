@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthServiceService {
 
-  _loginUrl = "http://testing-intern-api.herokuapp.com/api/user/login"
+  _loginUrl = "https://testing-intern-api.herokuapp.com/api/user/login"
 
   constructor( private http:HttpClient ) { }
 

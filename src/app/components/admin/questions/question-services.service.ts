@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class QuestionServicesService {
 
-  private _geturl: string = "http://testing-intern-api.herokuapp.com/api/question/questions";
-  private _posturl: string = "http://testing-intern-api.herokuapp.com/api/question/question";
+  private _geturl: string = "https://testing-intern-api.herokuapp.com/api/question/questions";
+  private _posturl: string = "https://testing-intern-api.herokuapp.com/api/question/question";
 
   httpOptions:any;
 

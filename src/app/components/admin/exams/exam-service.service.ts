@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ExamServiceService {
 
-  private _url: string = "http://testing-intern-api.herokuapp.com/api/exam/exams";
+  private _url: string = "https://testing-intern-api.herokuapp.com/api/exam/exams";
 
 
   token = localStorage.getItem('token');

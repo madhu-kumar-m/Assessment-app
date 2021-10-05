@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class BranchServicesService {
 
-  private _url: string = "http://testing-intern-api.herokuapp.com/api/branch/branches";
+  private _url: string = "https://testing-intern-api.herokuapp.com/api/branch/branches";
 
   token = localStorage.getItem('token');
 
