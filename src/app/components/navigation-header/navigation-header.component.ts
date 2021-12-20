@@ -43,6 +43,10 @@ export class NavigationHeaderComponent implements OnInit {
       this.student = true;
     }
 
+     // Check if user not logged in then redirect to login
+     if(!localStorage.getItem("token")){
+      this.route.navigate(['login']);
+    }
 
 
   }
